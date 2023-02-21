@@ -1,3 +1,12 @@
-<p><%= @article.title %></p>
-<p><%= @article.content %></p>
-<p> <%= link_to "Go back home", articles_path %> </p>
+<div class="m-5">
+  <div class="border w-25 mb-3 p-2 shadow bg-body-tertiary rounded">
+    <h1 class="fs-1">Title</h1>
+    <p class="fs-3" ><%= @article.title %></p>
+  </div>
+
+  <div class="border w-25 mt-3 p-2 shadow bg-body-tertiary rounded">
+    <h2 class="fs-2">Descripcion</h2>
+    <p class="fs-5"><%= @article.content %></p>
+  </div>
+  <p class="mt-3" > <%= link_to "Go back home", articles_path, class:"text-decoration-none btn btn-outline-secondary btn-sm"%> </p>
+</div>

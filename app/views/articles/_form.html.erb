@@ -1,7 +1,15 @@
-<%= form_with model: article do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :content %>
-  <%= f.text_field :content %>
-  <%= f.submit %>
-<% end %>
+<div class="container w-25 mt-5">
+
+  <%= form_with model: article do |f| %>
+    <div class="">
+      <p class="border p-2 text-center"> <%= f.label :title %>
+      <%= f.text_field :title %> </p>
+    </div>
+    <div class="">
+      <p class="border p-2 text-center"> <%= f.label :content %>
+      <%= f.text_field :content %> </p>
+    </div>
+
+    <p><%= f.submit class: "btn btn-outline-secondary btn-sm" %></p>
+  <% end %>
+</div>

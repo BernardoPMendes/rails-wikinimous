@@ -1,7 +1,13 @@
-<h1>My articles</h1>
-<% @articles.each do |articles| %>
-<p> <%= link_to articles.title, article_path(articles)  %> </p>
-    <%= link_to "Delete", article_path(articles) ,data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-    <%= link_to "edit", edit_article_path(articles)%>
-<% end %>
-<p> <%= link_to "create new", new_article_path %> </p>
+<div class="container mt-4">
+  <h1>My articles</h1>
+
+    <% @articles.each do |articles|%>
+  <div class="border mt-2 mb-2 p-0 w-25 shadow bg-body-tertiary rounded">
+    <p class="mt-4 mb-0 text-center "> <%= link_to articles.title, article_path(articles), class:"text-decoration-none text-primary fs-2" %> </p>
+      <%= link_to "Delete", article_path(articles), class:"text-decoration-none btn btn-danger btn-sm", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+      <%= link_to "edit", edit_article_path(articles), class:"text-decoration-none btn btn-info btn-sm"%>
+  </div>
+      <% end %>
+
+  <p class="mt-3"> <%= link_to "create new", new_article_path, class:"text-decoration-none btn btn-primary btn-sm" %> </p>
+</div>
